@@ -165,7 +165,7 @@
 
         .timeline-item {
             display: flex;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.25rem;  /* Reduced from 0.5rem */
         }
 
         .timeline-date {
@@ -175,23 +175,35 @@
             padding-right: 1.5rem;
             text-align: right;
             flex-shrink: 0;
+            padding-top: 0;  /* Remove top padding */
         }
 
         .timeline-content {
             position: relative;
             padding-left: 1.5rem;
-            border-left: 1px solid #999; /* Changed from #eee to #999 */
+            border-left: 1px solid #999;
+            margin-top: 0;  /* Remove top margin */
+            padding-bottom: 1rem;
+        }
+
+        .timeline-content h3 {
+            margin-top: 0;  /* Remove top margin from headers */
         }
 
         .timeline-content::before {
             content: '';
             position: absolute;
             left: -4px;
-            top: 8px;
+            top: 0;
             width: 7px;
             height: 7px;
-            background: #999; /* Changed from #666 to #999 */
+            background: #999;
             border-radius: 50%;
+        }
+
+        /* Remove extra padding from last item */
+        .timeline-item:last-child .timeline-content {
+            padding-bottom: 0;
         }
 
         @media (max-width: 600px) {
