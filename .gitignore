@@ -175,3 +175,7 @@ cython_debug/
 
 # virtual environment
 website_RadimMusalek_venv
+
+node_modules/
+.DS_Store
+*.log
